@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 선택자2</title>
+    <!-- 작업시 외부스타일로 기본 스타일을 지정하고
+        수정하고 싶은부분은 내부스타일로 지정하는 편 -->
+    
+    <!-- 각주처리 단축키 컨트롤+/ -->
+    <!-- 같은 선택자의 경우 !important 를 적용하면 밑에서 같은 선택자의 스타일을 변경해도 변경되지않는다.   -->
+    
+    <!--    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">-->
+    <!-- 웹 폰트는 html문서 맨 위에 적용하고 css(font-family: 'Nanum Gothic', sans-serif;)를 스타일 태그 안에 적용하거나 css파일 안에 적용한다. -->
+    <link rel="stylesheet" href="style1.css">
+    
+    <style>
+        
+        @import url("style1.css"); /*이 형식으로폰트 적용도 가능*/
+        
+        *{font-family: 'Nanum Gothic', sans-serif;}
+        ul{list-style:none; color:yellow !important; }
+        #list{color:blue;}
+        .list{color:red;}
+        ul{color:orange;}
+    </style>
+    
+</head>
+
+<body>
+   
+    <ul>
+        <li class="list">첫번째</li>
+        <li>두번째</li>
+        <li class="list" id="list">세번째</li>
+        <li>네번째</li>
+    </ul>
+    
+    <ol>
+        <li class="list">첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li class="list">네번째</li>
+    </ol>
+    
+</body>
+
+</html>

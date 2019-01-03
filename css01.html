@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 선택자1</title>
+    <style>
+        /* 우선순위 id>class>태그*/
+        /* , 사용하면 따로 붙여서쓰면 하나의 요소 >는 반드시 자식요소
+        띄어쓰면 자식요소든, 손주 요소든 상관없이 포함하는 요소*/
+        *{font-size:12pt;}
+        #data{color:aqua;}
+        .hit{text-decoration: overline; color:brown;}
+        p, span{text-decoration:underline;}
+        span#data{color:red;}
+        .hit#data{color:blue;}
+        p > span {}
+        p > .hit {}
+        p > #data {}
+        p > span.hit {}
+        p > span#date{}
+        
+        p * {}    
+        p span{}
+        p #data{}
+        p .hit{}
+        p span.hit#data{}
+        /*상식적으로 우선순위가 낮은 태그 선택자-클래스-아이디 순으로 작성
+        
+        전체선택자(*)
+        태그선택자(태그명{})
+        클래스선택자(.)
+        아이디선택자(#)
+        복수선택자(요소1,요소2)
+        자식선택자(부모>자식)
+        후손선택자(조상 후손)
+        조합선택자(태그.클래스#아이디)
+        
+        */
+    </style>
+    
+</head>
+<body>
+    <p class="paragraph">
+           당신은 <strong>공부</strong>를 하고 계십니까?
+        <em><span class="hit" id="data">밥</span></em>은 먹고 다닙니까?
+    </p>
+</body>
+</html>

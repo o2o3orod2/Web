@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 속성2</title>
+    
+    <style>
+    
+        /*   텍스트 정렬     */
+        .align1{text-align: center;}
+        .align2{text-align: right;}
+        
+        /*이미지에 대한 글자 세로 정렬*/
+        .vtalign1{vertical-align: middle;}
+        
+        /*   들여쓰기 내어쓰기  */
+        .indent1{text-indent: 20px; padding:30px;}
+        .indent2{text-indent: -20px; padding:30px;}
+        
+        /*    대소문자 변경    */
+        .trans1{text-transform: uppercase;}
+        .trans2{text-transform: capitalize;}
+        .trans3{text-transform: lowercase;}
+        
+        
+        /*   밑줄 아랫줄 윗줄 등    */
+        .deco1{text-decoration: underline;}
+        .deco2{text-decoration: line-through;}
+        .deco3{text-decoration: overline;}
+        .deco4{text-decoration: none;}
+        
+        /*   자간(각 글자 사이사이 간격)   */
+        .letter1{letter-spacing: 20px;}
+        .letter2{letter-spacing: -10px;}
+        
+        
+        /*   어간(띄어쓰기 간격)   */
+        .word1{word-spacing: 20px;}
+        .word2{word-spacing: -5px;}
+        
+        
+        /*   한줄로 처리하고 생략기호 추가   */
+        .wd{width:200px; }
+        .txt1{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        
+        
+        /*   3줄로 처리하고 생략기호 추가   */
+        .txt2{white-space: normal; line-height: 1.2; height:3.6em;
+              text-align: left; word-wrap:break-word; display:-webkit-box;
+              -webkit-line-clamp:3; -webkit-box-orient:vertical;
+             overflow: hidden;
+              }
+            /* word-wrap: 단어 보호 (break-word,normal)
+               line-clamp: 표시할 줄 수 (속성 값은 숫자를 입력)*/
+        
+        
+    </style>
+
+    
+</head>
+<body>
+    
+    <p>일반 글자</p>
+    <p class="align1">가운데 정렬</p>
+    <p class="align2">오른쪽 정렬</p>
+    
+    <p class="vtalign1">이미지와의 정렬
+        <img src="http://placehold.it/300X240" alt="가운데이미지">
+            
+    </p>
+    
+    <p class="vtalign2">이미지와의 정렬2
+        <img src="http://placehold.it/300X240" alt="일반이미지">
+    </p>
+    
+    <p class="indent1">통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 사면·감형 및 복권에 관한 사항은 법률로 정한다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+    <p class="indent2">통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 사면·감형 및 복권에 관한 사항은 법률로 정한다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+    
+    <p class="trans1">bEaUtiFul Country~! kORea~! 모두 대문자로</p>
+    <p class="trans2">bEaUtiFul Country~! kORea~! 단어 첫글자만</p>
+    <p class="trans3">bEaUtiFul Country~! kORea~! 모두 소문자로</p>
+    
+    <p class="deco1">오예 오예 음오아예 밑줄</p>
+    <p class="deco2">가나다라마바사 가운데취소선</p>
+    <p class="deco3">오예 오예 음오아예 윗줄</p>
+    <p class="deco4">오예 오예 음오아예 줄없음</p>
+    
+    <p class="letter1">우리나라 대한민국 만세 자간 20px</p>
+    <p class="letter2">우리나라 대한민국 만세 자간 -10px</p>
+    
+    <p class="word1">우리나라 대한민국 만세 어간 20px</p>
+    <p class="word2">우리나라 대한민국 만세 어간 -5px;</p>
+    
+    <!-- 이중 클래스 - 띄어쓰기로 클래스를 여러개 지정할 수 있다. -->
+    <p class="wd txt1">새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다. 국가안전보장회의는 대통령이 주재한다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.
+        
+    </p>
+    <p class="wd txt2">새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다. 국가안전보장회의는 대통령이 주재한다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.</p>
+</body>
+</html>

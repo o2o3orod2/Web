@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 선택자 11</title>
+    
+    <style>
+    
+        /*   전/후 선택자/ 부정 선택자   */
+        
+        a{text-decoration: none;}
+        a:link{color:red;}
+        
+        a:link::after{content:attr(title) "-" attr(href);}
+        /*  a태그 중 link가 있는 경우, 뒤에
+            a태그 속성의 title 값과 "-" a태그 속성의 href 값을 넣어라  */
+        a:link::before{content:'사이트: ';}    
+        /*  a태그 중 link가 있는 경우, 앞에 '사이트: '를 넣어라 */
+        
+        input:not([type=password]){background: red;}
+        /*  input 태그 중 타입이 password가 아닌것의 배경을 레드로 변경해라  */
+        
+    </style>
+    
+</head>
+<body>
+   
+   <h1><a>링크없는 a 태그</a></h1>
+   <h1><a href="http://www.naver.com" title="네이버">링크1 -</a></h1>
+   <h1><a href="http://www.daum.net" title="다음">링크2 -</a></h1>
+   <h1><a href="http://www.nate.com" title="네이트">링크3 -</a></h1>
+   
+   <input>
+   <input type="text">
+   <input type="password">
+   <input type="file">
+   
+</body>
+</html>

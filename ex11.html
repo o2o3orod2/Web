@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html 연습11 - 레이아웃과 관련된 요소(시맨틱 태그)</title>
+    
+    <style>
+        *{padding:0; margin:0;}
+        body, html{width:100%; height:100%;}
+        .wrap{width:1040px; margin:0 auto; }
+        header{height:100px; background:#3ee;}
+        footer{height:100px; background:#333; color:#fff;}
+        main{width:100%; height:700px; }
+        aside{float:left; height:700px; width:220px; background:red;}
+        section{float:right; width:820px; height:700px; overflow:hidden;}
+    </style>
+    
+</head>
+<body>
+   <!--div로 맨처음 문서를 감싼다-->
+    <div class="wrap">
+        <!--header 영역-->
+        <header>
+            <nav id="gnb">
+                내비게이션 메뉴
+            </nav>
+        </header>
+        <!--main 영역-->
+        <main>
+           
+            <aside>
+                사이드바
+            </aside>
+            
+         <section>
+               
+                <figure id="visual">
+                    <img src="http://placehold.it/900x300" alt="">
+                </figure>
+            
+            <article>
+                <h2>헤드라인</h2> <!--아티클은 반드시 제목을 가져야함-->
+                <p>내용 또는 이미지
+                </p>
+                <p><img src="http://placehold.it/400x300" alt="">
+                </p> 
+            </article>
+            
+        </section>
+            
+        </main>
+        <!--footer 영역-->
+        <footer>
+            
+            <address>회사 정보내용</address>
+            
+        </footer>
+    </div>
+</body>
+</html>

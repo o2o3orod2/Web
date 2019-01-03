@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 속성 5</title>
+    
+    <style>
+    
+        /*  위치관련 속성 = 레이아웃 속성
+           1. float : 흐름 속성(left, right, none)
+           2. clear : 흐름 해제(left, right, none, both)
+           3. position : 배치-위치기준
+                        asolute - 절대적 좌표로 설정 , 겹칠 수 있음,
+                                부모박스를 기준으로 절대적인 포지션에 배치
+                        ※ left, right, top, bottom, z-index 
+                            문서나 부모의 4개의 구석점을 기준으로 위치
+        
+                        relative - 부모 박스, 상대적, margin-top 등으로 값을 주는게 편함
+                                   *컨텐츠 겹칠 수 없음. 크기를 정해주는것이 좋다.
+                        ※ 이전 요소의 정해진 크기 또는 갖고있는 크기 다음에 배치
+                            float, margin-left, margin-right, margin-top, margin-bottom 등
+        
+                        static - 정적 , 부모박스 가능, 태그순으로 쌓아줌,
+                                 *컨텐츠 겹칠 수 없음. margin-top 등으로 값 줌 높이나 크기 줄 필요없음.
+                        ※ 물이 흐르듯이 콘텐츠가 갖고 있는 크기만큼 자동으로 배치(포지션의 기본값)
+                            float, margin-left, margin-right, margin-top, margin-bottom 등
+        
+                        fixed - 화면에 고정 배치-스크롤해도 이동하지않고 제자리 고정,
+                                퀵메뉴 등, 부모 상관없음.
+                        ※ left, right, top, bottom, *z-index(반드시 넣어야함) 
+        
+        
+                    실제 배치시에는 가장 큰 박스는(body 또는 wrap) static. 각 페이지 div는 relative
+                    그 안에 컨텐츠를 겹치게 하고싶을때는 absolute.
+                    겹치지 않게 하려면 static.
+        
+                    ※ s r a 순 또는 s r s 순, s a r a 으로 하는 것이 좋음 
+            4. left : 위치기준 왼쪽으로 부터 떨어진 거리 (px 단위, %단위, auto)
+            5. right : 위치기준 오른쪽으로 부터 떨어진 거리 (px 단위, %단위, auto)
+            6. top : 위치기준 위쪽으로 부터 떨어진 거리 (px 단위, %단위, auto)
+            7. bottom : 위치기준 아래쪽으로 부터 떨어진 거리 (px 단위, %단위, auto)
+            8. z-index : 컨텐츠가 서로 겹쳤을 경우 레이어값을 지정하여 위 또는 아래에 배치 (숫자 정수)
+        */
+        
+        *{margin:0; padding:0;
+        }
+        body, html{width:100%; height:100%;
+        }
+        .wrap{width:480px; height:120px; position: relative; overflow: hidden;
+              margin:0 auto;
+        }
+            /*  포지션이 앱솔루트나 픽스면 마진0오토 안먹음,    
+                크기 지정도 해줘야 먹음 크기100%이면 안먹음    */
+        .col{float:left; width:100px; height:100px; margin:10px;
+        }
+        #img1, #img2, #img3, #img4{position: absolute;
+        }
+        #img1{left:30px; top:30px;
+        }
+        #img2{left:60px; top:60px; z-index:10;
+        }
+        #img3{left:90px; top:90px;
+        }
+        #img4{right:200px; bottom:40px;
+        }
+        
+        #quick{position: fixed; z-index: 999; right:100px;
+                top:150px; width:100px; height:160px; background: #333;
+        }
+        #quick span{display:block; width: 100px; height: 40px; line-height: 40px;
+                    color: #fff; text-align: center;
+        }
+        .blank{height: 1000px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <div class="wrap">
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+    </div>
+    <div class="wrap box1">
+        <section class="col" id="img1">
+        <img src="http://placehold.it/100x100/f00" alt="">
+        </section>
+        <section class="col" id="img2">
+        <img src="http://placehold.it/100x100/0f0" alt="">
+        </section>
+        <section class="col" id="img3">
+        <img src="http://placehold.it/100x100/00f" alt="">
+        </section>
+        <section class="col" id="img4">
+        <img src="http://placehold.it/100x100/ff0" alt="">
+        </section>
+    </div>
+    <div class="wrap box2">
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+        <section class="col"><img src="http://placehold.it/100x100" alt=""></section>
+    </div>       
+    
+     <div id="quick">
+         <span>링크1</span>
+         <span>링크2</span>
+         <span>링크3</span>
+         <span>링크4</span>
+     </div>
+     
+     <div class="blank"></div>
+     <div class="blank"></div>
+     <div class="blank"></div>
+    
+</body>
+</html>

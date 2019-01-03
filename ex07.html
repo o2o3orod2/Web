@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html 연습7-폼1</title>
+</head>
+<body>
+    <h3>폼 태그-로그인창 연습</h3>
+    <form action="login.php" method="post" id="frm1">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <label for="m_id">아이디</label> :
+            <input type="text" id="m_id" name="id" title="please id input"><br><br>
+            <label for="m_pw">비밀번호</label> :
+            <input type="password" id="m_pw" name="pw"><br><br>
+            <input type="submit" value="로그인"> &nbsp;
+             &nbsp;  &nbsp;  &nbsp;
+             <input type="reset" value="취소">
+        </fieldset>
+    </form>
+    
+    <form action="" id="frm2">
+       <fieldset>
+        <legend>모바일 로그인</legend>
+        <input type="text" id="id" name="id" placeholder="아이디" size="12" autofocus maxlength="8" value="abc" required readonly pattern="[a-zA-Z0-9]{4,8}"><br><br>
+        <!-- sizw : 보이는 텍스트창 사이즈 -->
+        <!-- maxlenght : 최대 글자 수 -->
+        <!-- required : 필수입력 안내 -->
+        <!-- readonly: 아이디나 패스워드 고정 -->
+        <!-- disabled : 내용 쓸수 없게 만드는 속성-->
+        <!-- pattern : 텍스나 내용의 형식 지정 -->
+        <!-- autofocus : 처음 시작할때 포커스 -->
+        <input type="password" id="pw" name="pw" placeholder="비밀번호" size="12"><br><br>
+        <input type="submit" value="로그인"> &nbsp; &nbsp;
+        <input type="reset" value="취소">
+        </fieldset>
+    </form>
+    
+</body>
+</html>

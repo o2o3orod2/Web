@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 선택자 9</title>
+    
+    <style>
+        
+        /*   형태 구조 선택자     */
+    
+        a{ color:#000000; text-decoration: none;}
+        li:first-of-type a{color:red; }
+        /*  li 태그중에 첫번째 first-child와 같은 기능      */
+        
+        li:last-of-type a{color:green;}
+        /*  last-child와 같은 기능      */
+        
+        li:nth-of-type(2) a{color:skyblue;}
+        /*  nth-child와 같은 기능     */
+        
+        li:only-of-type a {color:pink;}
+        /*  혼자있는 태그  */
+        
+        
+        
+        
+        .page{height:900px; background: red; margin-top:20px;}
+        
+        .page:target{background: orange;}
+        /* page 클래스가 타겟이 됐을때를 선택  */
+        
+        
+        
+    </style>
+    
+</head>
+<body>
+   
+    <ul>
+       <li><a href="">김기태</a></li>
+       <li><a href="">멋쟁이</a></li>
+       <li><a href="">완전잘생김</a></li>
+       <li><a href="">천재</a></li>
+       <li><a href="">착한사람</a></li>
+       <li><a href="">백심이</a></li>
+       <li><a href="">철사줄</a></li>
+       <li><a href="">단단이</a></li>
+   </ul>
+    
+    <a href="#page2">두번째 페이지로</a>
+    <a href="#page3">세번째 페이지로</a>
+    
+    <ul>
+        <li><a href="#">김기태</a></li>
+        <li><a href="#">못생김</a></li>
+        <li><a href="#">왕짜증</a></li>
+        <li><a href="#">동네바보</a></li>
+    </ul>
+    
+    <ul>
+        <li><a href="">김기태</a></li>
+    </ul>
+    
+    <div class="page" id="page2">2 페이지</div>
+    <div class="page" id="page3">3 페이지</div>
+    
+</body>
+</html>

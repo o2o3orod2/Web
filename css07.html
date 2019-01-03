@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 선택자 7</title>
+</head>
+
+    <style>
+        
+        /* 상태 선택자 */
+        /* : 다음에 나오는애들은 가상선택자로서 형태나 상태가 바뀜에 따라선택된다 */
+        
+        input:enabled{background: pink;}
+        /*    사용가능한 상태 enabled    */
+        
+        input:disabled{background: purple;}
+        /*    사용 불가능한 상태 disabled   */
+        
+        input+label{color:blue;}
+        /*   인풋태그 다음에 나오는 라벨 태그 선택     */
+        
+        input:checked+label{color:red;}
+        /*   인풋태그 중 체크되어있는 애들중 다음에 나오는 라벨 태그 선택   */
+        
+        input:focus{background: orange;}
+        /*    인풋태그 중 커서가 선택되어있는 애를 선택   */
+        
+        
+    </style>
+
+<body>
+    
+    <input>
+    <br>
+    <input type="checkbox" checked>
+    <label for="">선택1</label>
+    <br>
+    <input type="checkbox">
+    <label for="">선택2</label>
+    <br>
+    <input disabled="disabled">
+    <br>
+    
+</body>
+</html>

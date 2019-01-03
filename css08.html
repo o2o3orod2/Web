@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 선택자 8</title>
+    
+    <style>
+        
+        /*  순서 위치 선택자  */
+        ul{list-style: none; overflow: hidden;}
+        li{float:left; padding:15px; border:1px solid #000000;
+        border-right:0px;}
+    
+        li:first-child{border-radius:10px 0px 0px 10px; }
+        /* 첫번째 구성요소중 태그가 li인것 /li 태그중 첫번째 자식태그  */
+        
+        li:last-child{border-radius:0px 10px 10px 0px; border-right: 1px solid #000000;}
+        /* li 태그중 마지막 자식태그  */
+        
+        li:nth-child(3n){background: red;}
+        /*  li 태그의 자식태그 중  3의 배수     */
+        
+        li:nth-child(3n+1){background: orange;}
+        /*   li 태그의 자식태그 중 3의배수+1    */
+        
+        li:nth-child(3n+2){background: skyblue;}
+        /*   li 태그의 자식태그 중 3의배수+2    */
+        
+        li:nth-child(4){background: yellow;}
+        /*   li 태그의 자식태그 중 4번째    */
+        
+        a{text-decoration: none; color:#666; font-weight: 900;}
+        /*   a 태그    */
+        
+        a:empty{display: block; width:120px; height:50px; background: black;}
+        /*   a 태그중 내용이 비어있는 경우    */
+        
+        li:only-child{background: navy;}
+    </style>
+</head>
+<body>
+   
+   <ul>
+       <li><a href="">김기태</a></li>
+       <li><a href="">멋쟁이</a></li>
+       <li><a href="">완전잘생김</a></li>
+       <li><a href="">천재</a></li>
+       <li><a href="">착한사람</a></li>
+       <li><a href="">백심이</a></li>
+       <li><a href="">철사줄</a></li>
+       <li><a href="">단단이</a></li>
+   </ul>
+    
+    <a href="http://www.naver.com"></a>
+    <a href="http://www.google.com">구글</a>
+    
+    <ul>
+        <li><a href="#">김기태</a></li>
+        <li><a href="#">못생김</a></li>
+        <li><a href="#">왕짜증</a></li>
+        <li><a href="#">동네바보</a></li>
+    </ul>
+    
+    <ul>
+        <li><a href="">김기태</a></li>
+    </ul>
+    
+    
+</body>
+</html>
